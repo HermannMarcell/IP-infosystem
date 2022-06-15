@@ -1,30 +1,36 @@
 print('This is our main test file')
 
-def field_size_inp():
+import requests
+import ipaddress
 
-    try:
-        field_side = int(input('Field sice: '))
-        return field_side
-    except:
-        field_side = 'wrong_input'
-        return field_side
+def get_ip():
+    response = ip_address
+    return response["ip"]
 
 
-while True:
-    field_side = field_size_inp()
-    if field_side == 'wrong_input':
-        print('Please enter a valid number')
-    else:
-        field_size = field_side * field_side
-        snake_len = 1
-        feeding = 0
-        while snake_len < field_size:
-            snake_len = snake_len * 2
-            if snake_len <= field_size:
-                feeding += 1
-            else: continue
-        print(feeding)
 
+def get_location():
+    ip_address = get_ip()
+    response = requests.get(f'https://ipapi.co/{ip_address}/json/').json()
+    location_data = {
+        "ip": ip_address,
+        "IP-version": response.get("version"),
+        "city": response.get("city"),
+        "postal code": response.get("postal"),
+        "region": response.get("region"),
+        "country": response.get("country_name"),
+        "internet host": response.get("org")
+    }
+    return location_data
 
-#comment -  this is a test comment
+#test ip_address = {'ip': '2001:4860:4860::8888'}
+
+typed_ip = input("Please enter an IP-Address or type 'own' to inspect your own: ")
+if typed_ip == "own":
+    ip_address = requests.get('https://api64.ipify.org?format=json').json()
+else:
+    ip_address = dict()
+    ip_address['ip'] = typed_ip
+
+print(get_location())
 
