@@ -1,1 +1,3 @@
-This is a small project to create a program that shows you information about an IP-Address
+This is a small project to create a program that shows you information about IP-Addresses
+
+It uses ipapi for the information and tkinter for the graphical interface
