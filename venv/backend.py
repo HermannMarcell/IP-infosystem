@@ -1,4 +1,4 @@
-#URL-infosystem V1.0
+#IP-infosystem V1.0
 #this is the main back-end file, which collects data from ipapi.co and returns the selected values
 
 import requests
