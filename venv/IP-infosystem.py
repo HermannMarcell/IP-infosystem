@@ -124,6 +124,7 @@ def dataflow():
 #flow of function calling if "Use own IP" button is clicked
 def dataflow2():
     own_ip_info()
+    ipinp.delete(0, END)
     changebutton()
 
 #creating labels, entrybox and buttons
