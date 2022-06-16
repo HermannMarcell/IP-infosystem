@@ -1,5 +1,5 @@
-#IP-infosystem V1.0
-#this is the main back-end file, which collects data from ipapi.co and returns the selected values
+#IP-infosystem V1.0 - background logic
+#this is the raw code, which achieves the desired output without grafical interface
 
 import requests
 import ipaddress

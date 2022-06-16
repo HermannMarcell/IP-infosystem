@@ -1,3 +1,13 @@
-This is a small project to create a program that shows you information about IP-Addresses
+IP-infosystem
+Version 1.0
 
-It uses ipapi for the information and tkinter for the graphical interface
+This is a small project to create a program that shows you information about IP-Addresses
+It uses ipapi.co and ipify.org for the information and tkinter for the graphical interface
+
+Known bugs:
+- old label text does not vanish when doing repeated searches, only under the new text.
+
+The base code and inspiration for this project comes from
+https://www.freecodecamp.org/news/how-to-get-location-information-of-ip-address-using-python/
+
+Created by Marcell Hermann 2022
