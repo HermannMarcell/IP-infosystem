@@ -34,4 +34,3 @@ else:
 
 #calls the get_location() class and prints the results (value pairs)
 print(get_location())
-
